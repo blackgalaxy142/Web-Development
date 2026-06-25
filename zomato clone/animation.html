@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #id1{
+            height: 100px;
+            width: 70px;
+            background-color: red;
+            color: hotpink;
+            animation: suria 4s infinite alternate;
+        }
+             #id2{
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+            color: white;
+        }
+        @keyframes suria{
+            0%{background-color: green; box-shadow: 2px 2px 2px 6px green; transform:}
+            25% {background-color: yellow; box-shadow: 6px 6px 6px 0px yellowgreen;}
+            50% {background-color: blue; box-shadow: 10px 10px 10px 10px black;}
+            75% {background-color: rgb(110, 255, 117); box-shadow: 5px 5px 5px 10px rgb(31, 20, 188);}
+            100% {background-color: rgb(255, 174, 0); box-shadow: 10px 10px 10px 10px rgb(241, 20, 20);} 
+        }
+
+        @keyframes suria2{
+            0%{
+                transform: translateY(200px);
+            }
+            50%{
+                transform: translateY(0px);
+            }
+            100%{
+                transform: translateY(-200px);
+            }
+        }
+    </style>
+</head>
+<body>
+     <div id="id1">
+        Box
+    </div> 
+    <div id="id2">
+        Box
+    </div>
+</body>
+</html>
