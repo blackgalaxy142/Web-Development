@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      .card{
+        height:100px;
+        width:100px;
+        background-color:black;
+        color:white;
+        margin:10px;
+        border-radius:20px;
+        padding:20px;
+        box-shadow:3px 3px 10px 0px blue;
+      }
+    </style>
+</head>
+<body>
+    Addition = <p id="pid1">...</p>
+    Multiplication = <p id="pid2">...</p>
+    Division = <p id="pid3">...</p>
+    Subtraction = <p id="pid4">...</p>
+    <script>
+        var x='suria';
+        var num1=12
+        var num2=3
+        //document.write('<h1>this is ${x}</h1><br>')
+       //document.write('<h1>sum of ${num1} and ${num2} is ${num1+num2}</h1><br>')
+        document.getElementById("pid1").innerHTML=num1+num2
+        document.getElementById("pid2").innerHTML=num1*num2
+        document.getElementById("pid3").innerHTML=num1/num2
+        document.getElementById("pid4").innerHTML=num1-num2
+        
+        function f1(n){
+            document.write(`<div class="card">
+                f1(n) = <sub>n</sub><sup>2</sup><br>
+                f1(${n}) = ${n**2}<br>
+                </div>`)
+        }
+        f1(8)
+        f1(10)
+        f1(22)
+        f1(100)
+        f1(23)
+    </script>
+</body>
+</html>
