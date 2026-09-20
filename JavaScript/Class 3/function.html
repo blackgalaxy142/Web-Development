@@ -12,16 +12,15 @@
     <hr>
 
     <div>
-        Adition:    <p id="pid2">0</p>
-        Subtraction:    <p id="pid3">0</p>
-        Multiplication: <p id="pid4">0</p>
-        Division:   <p id="pid5">0</p>
-        Remainder:  <p id="pid6">0</p>
+      <input id="inp1" placeholder="Enter a number" value="0"><br><br>
+      <input id="inp2" placeholder="Enter a number" value="0"><br><br>
+      
+        Result :<p id="resId">0</p>
         <button class="btn btn-danger" onclick="add()">Add</button>
-        <button class="btn btn-danger" onclick="add()">Sub</button>
-        <button class="btn btn-danger" onclick="add()">Mul</button>
-        <button class="btn btn-danger" onclick="add()">Div</button>
-        <button class="btn btn-danger" onclick="add()">Rem</button>
+        <button class="btn btn-danger" onclick="Subtraction()">Sub</button>
+        <button class="btn btn-danger" onclick="Multiplication()">Mul</button>
+        <button class="btn btn-danger" onclick="Division()">Div</button>
+        <button class="btn btn-danger" onclick="Remainder()">Rem</button>
 
     </div>
     <script>
@@ -32,12 +31,35 @@
         document.getElementById("pid1").innerHTML=`Bello ${name}, I am Groot!`
     }
     function add(){
-        var num1= Number(prompt("Enter a number:"))
-        var num2= Number(prompt("Enter a number:"))
-        var sum= num1 +num2
-        document.getElementById("pid2").innerHTML=`sum of ${num1} and ${num2}`
+        var num1= Number(document.getElementById("inp1").value)
+        var num2= Number(document.getElementById("inp2").value)
+        var sum= num1 + num2
+        document.getElementById("resId").innerHTML=`sum of ${num1} and ${num2}=${sum}`
     }
-    
+    function Subtraction(){
+       var num1= Number(document.getElementById("inp1").value)
+        var num2= Number(document.getElementById("inp2").value)
+        var sub= num1 - num2
+        document.getElementById("resId").innerHTML=`${num1} minus ${num2}=${sub}`
+    }
+    function Multiplication(){
+       var num1= Number(document.getElementById("inp1").value)
+        var num2= Number(document.getElementById("inp2").value)
+        var product= num1*num2
+        document.getElementById("resId").innerHTML=`product of ${num1} and ${num2}=${product}`
+    }
+    function Division(){
+        var num1= Number(document.getElementById("inp1").value)
+        var num2= Number(document.getElementById("inp2").value)
+        var div= num1/num2
+        document.getElementById("resId").innerHTML=`${num1} divided by ${num2}=${div}`
+    }
+    function Remainder(){
+         var num1= Number(document.getElementById("inp1").value)
+        var num2= Number(document.getElementById("inp2").value)
+        var xyz= num1%num2
+        document.getElementById("resId").innerHTML=`remainder of ${num1} and ${num2}=${xyz}`
+    }
     //call the robot
     //1st way is below, 2nd way (most pop) using onclick button above
     //groot()

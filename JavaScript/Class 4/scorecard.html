@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Card Generator</title>
+    <style>
+        .c1{
+            height:300px;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+      <div class="c1 container">
+        <div>
+            
+        Math <input id="inp1" placeholder="Enter math marks"><br><br>
+        Bio <input id="inp2" placeholder="Enter bio marks"><br><br>
+        English <input id="inp3" placeholder="Enter english marks"><br><br>
+        History <input id="inp4" placeholder="Enter history marks"><br><br>
+    <button onclick="calculateMarks()">-calculate your marks-</button><br><br>
+    result: <p id="resId"></p>
+    </div>
+      
+      </div>
+        <script>
+            function calculateMarks(){
+                var mathMarks= Number(document.getElementById("inp1").value)
+                var bioMarks= Number(document.getElementById("inp2").value)
+                var englishMarks= Number(document.getElementById("inp3").value)
+                var historyMarks= Number(document.getElementById("inp4").value)
+                var totalmarks= mathMarks + bioMarks +englishMarks + historyMarks
+                document.getElementById("resId").innerHTML= `your total marks is ${totalmarks}`
+            }
+    
+        </script>
+</body>
+</html>
