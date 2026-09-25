@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subtraction and Addition Calculator</title>
+</head>
+<body>
+    <input id="firstNumber" type="number" value="0">
+    <input id="secondNumber" type="number" value="0">
+
+    <br><button onclick="add()">Add</button>
+    <br><button onclick="subtract()">Subtract</button>
+    <br><button onclick="multiply()">Multiplication</button>
+    <br><button onclick="changeBackground()">Change Background</button>
+    <p id="result">The answer will appear here.</p>
+
+
+    <script>
+        function add() {
+            var num1 = Number(document.getElementById("firstNumber").value);
+            var num2 = Number(document.getElementById("secondNumber").value);
+            var answer = num1 + num2;
+            document.getElementById("result").textContent = answer;
+        }
+        function subtract(){
+            var num1=Number(document.getElementById("firstNumber").value);
+             var num2=Number(document.getElementById("secondNumber").value);
+             var answer= num1 - num2;
+             document.getElementById("result").textContent=answer;
+        }
+        function multiply(){
+            var num1=Number(document.getElementById("firstNumber").value);
+             var num2=Number(document.getElementById("secondNumber").value);
+             var answer= num1*num2;
+             document.getElementById("result").textContent=answer;
+        }
+        function changeBackground(){
+            var color=prompt("enter color name")
+            document.body.style.backgroundColor=color
+        }
+    </script>
+</body>
+</html>

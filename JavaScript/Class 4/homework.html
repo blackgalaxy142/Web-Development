@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+</head>
+<body>
+    <input id="enterFood">
+<p id="enterFood" placeholder="Enter your favorite food"></p>
+<button onclick="showFood()"> Show your favorite Food</button>
+<p id="message">Your food will appear here</p>
+
+<script>
+    function showFood(){
+        var name= document.getElementById("enterFood").value;
+        document.getElementById("message").textContent="I like "+ name;
+    }
+
+</script>
+
+    
+</body>
+</html>
