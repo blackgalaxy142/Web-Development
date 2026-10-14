@@ -91,7 +91,7 @@
                 <button onclick="takeInput('*')"class="symbol">*</button><br>
                 <button onclick="takeInput('0')"class="number">0</button>
                 <button onclick="takeInput('.')"class="number">.</button>
-                <button class="symbol">=</button>
+                <button onclick="calculate()"class="symbol">=</button>
                 <button onclick="takeInput('/')"class="symbol">/</button>
                 </input>
 
@@ -103,7 +103,17 @@
         function takeInput(inputValue){
            // document.write(value)
            document.getElementById("imp").value=inputValue;
-        }   
+        }
+        function calculate(){
+            var mathExpression = document.getElementById("imp").value
+            //document.write(mathExpression)
+            var result=eval(mathExpression)
+            document.getElementById("imp").value=result
+        }  
+        //you click on = ---> calls a function called calculate()
+//creating variable called mathExpression and taking the value from
+//input area with id imp
+//then it writes on doc whatever we have in mathexp 
     </script>
 </body>
 
