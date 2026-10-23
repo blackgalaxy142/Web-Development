@@ -9,7 +9,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
         .card1 {
-            height: 250px;
+            height: 250px auto;
             width: 250px;
             background: linear-gradient(to left, rgb(87, 140, 255), rgb(130, 188, 255));
             text-align: center;
@@ -68,6 +68,11 @@
             transform: translateY(-2px);
             box-shadow: 3px 3px 5px 0px black;
         }
+        #del{
+            width:70%;
+            background-color: lightgreen;
+        }
+
     </style>
 </head>
 
@@ -93,7 +98,9 @@
                 <button onclick="takeInput('.')"class="number">.</button>
                 <button onclick="calculate()"class="symbol">=</button>
                 <button onclick="takeInput('/')"class="symbol">/</button>
-                </input>
+                <br>
+                <button id="del" onclick="cleanInput()">DEL</button>
+            </input>
 
             </div>
         </div>
@@ -102,13 +109,16 @@
     <script>
         function takeInput(inputValue){
            // document.write(value)
-           document.getElementById("imp").value=inputValue;
+           document.getElementById("imp").value+=inputValue;
         }
         function calculate(){
             var mathExpression = document.getElementById("imp").value
             //document.write(mathExpression)
             var result=eval(mathExpression)
             document.getElementById("imp").value=result
+        }ss
+        function cleanInput(){
+            document.getElementById("imp").value=""
         }  
         //you click on = ---> calls a function called calculate()
 //creating variable called mathExpression and taking the value from

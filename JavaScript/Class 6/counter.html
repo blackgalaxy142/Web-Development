@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    button{
+        background-color: rgb(255, 190, 158)
+    }
+</style>
+<body>
+    <input id="nameInput">
+    <p id="greeting">Hello, ___________</p>
+    <button onclick="sayHello()">Say Hello</button><br><br>
+
+    <p id="pid">0</p>
+    <button onclick="inc()">Increment</button>
+    <button onclick="dec()">Decrement</button><br>
+    <button onclick="resetCount()">Reset</button><br><br>
+
+    <p id="para">1</p>
+    <input id="imp" type="number" value="4">
+    <button onclick="multiply()">Multiply by # typed</button><br>
+    <button onclick="resetMultiply()">Reset</button><br><br>
+
+
+    <p id="para2">0</p>
+    <button onclick="addTwo()">Add Two</button>
+    <script>
+        function sayHello(){
+            var name= document.getElementById("nameInput").value
+        document.getElementById("greeting").textContent="Hello, " + name
+    }
+
+        var count = 0;
+        var x = 1;
+        function inc() {
+            count = count + 1
+            document.getElementById("pid").innerHTML = count
+        }
+        function dec() {
+            count = count - 1
+            document.getElementById("pid").innerHTML = count
+        }
+        function resetCount(){
+            count= 0
+            document.getElementById("pid").innerHTML = count
+    }
+        
+        var inp = Number(document.getElementById("imp").value);
+        var x = 1;
+        function multiply() {
+            var inp = Number(document.getElementById("imp").value);
+            x = x * inp;
+            document.getElementById("para").innerHTML = x;
+        }
+        function resetMultiply(){
+            x= 1
+            document.getElementById("para").innerHTML = x
+        }
+
+        var count=0
+        function addTwo(){
+            count = count + 2
+            document.getElementById("para2").innerHTML= count
+        }
+
+
+    </script>
+</body>
+
+</html>
