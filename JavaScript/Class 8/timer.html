@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        body {
+            background-color: rgb(50, 4, 107);
+        }
+
+        .c1 {
+            background-color: blueviolet;
+            height: 100px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">
+        <div>
+            <input id="inp" type="number">
+            <p id ="id1">0</p>
+            <button onclick="f1()"> start countdown</button>
+        </div>
+    </div>
+    
+    <script>
+        var value=0
+        function f2(){
+            value= value-1
+            document.getElementById("id1").innerHTML= value
+        }
+        function f1() {
+            value= Number(document.getElementById("inp").value)
+            document.getElementById("id1").innerHTML = value
+            setInterval(f2,1000)
+        }
+        //settimeout
+        //setTimeout(f1,10000)
+        //setInterval(f1,1000)
+    </script>
+</body>
+
+</html>
