@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        .clock{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            padding: 2px;
+            background-color: palegreen;
+            display:flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            box-shadow:inset 2px 2px 2px 0px rgb(66, 122, 66);
+            font-family: cursive;
+            font-size: 27px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    
+<h1>Clock</h1>
+<div class="clock" id="pid1">00:00:00</div>
+    <script>
+
+        function updateClock(){
+        var now= new Date();
+        var currentHour= now.getHours()
+        var currentMinutes= now.getMinutes()
+        var currentSeconds= now.getSeconds()
+        var currentTime= currentHour + ":" + currentMinutes + ":" + currentSeconds
+        document.getElementById("pid1").innerHTML = currentTime
+        
+    }
+    updateClock()
+     setInterval(updateClock, 1000)
+    </script>
+</body>
+</html>
