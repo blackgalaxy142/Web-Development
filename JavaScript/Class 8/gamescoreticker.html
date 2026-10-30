@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Score Ticker</title>
+</head>
+<body>
+    <input id="inp" type="number">
+    <p id="id1">your number</p>
+    <button onclick="f1()">Start Ticker</button>
+    <script>
+        var value=0
+
+        function f1(){
+            value= Number(document.getElementById("inp").value)
+            document.getElementById("id1").innerHTML=value
+            setInterval(f2, 1000)
+        }
+        function f2(){
+            value= value + 1
+            document.getElementById("id1").innerHTML=value
+        }
+    </script>
+</body>
+</html>

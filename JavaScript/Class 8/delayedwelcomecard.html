@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delayed Welcome Card</title>
+</head>
+<body>
+    <input id="inp">
+    <p id="id1">Your name's greeting</p>
+    <button onclick="greeting()">See your greeting</button>
+    <script>
+        function greeting(){
+            var name= document.getElementById("inp").value
+            document.getElementById("id1").textContent= "Please wait..."
+            setTimeout(delaygreeting, 3000)
+        }
+       function delaygreeting(){
+           document.getElementById("id1").textContent="Welcome," + name
+       }
+       //question: Why when the "Welcome" appears, there is no name after it?
+    </script>
+</body>
+</html>
