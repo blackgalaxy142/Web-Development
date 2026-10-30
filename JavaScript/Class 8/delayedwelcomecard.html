@@ -16,9 +16,10 @@
             setTimeout(delaygreeting, 3000)
         }
        function delaygreeting(){
-           document.getElementById("id1").textContent="Welcome," + name
+        var name= document.getElementById("inp").value
+        document.getElementById("id1").textContent="Welcome, " + name 
        }
-       //question: Why when the "Welcome" appears, there is no name after it?
+       
     </script>
 </body>
 </html>
