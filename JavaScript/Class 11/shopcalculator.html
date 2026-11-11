@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Profit or Loss calculator</title>
+</head>
+<body>
+    
+
+    <input id="Totalbudget" type="number"> Total budget.<br>
+    <input id="Snackboxes" type="number"> Number of snack boxes.<br>
+    <input id="Price" type="number"> Price of one snack box.<br><br>
+    
+    <button onclick="finalamount()" id="finalamount">Final amount</button><br>
+
+    <h1>Result:</h1>
+    <p id="pid1"></p>
+    <p id="pid2"></p>
+    <p id="pid3"></p>
+
+    <script>
+       function finalamount(){
+        var Totalbudget = Number(document.getElementById("Totalbudget").value)
+        var Snackboxes= Number(document.getElementById("Snackboxes").value)
+        var Price = Number(document.getElementById("Price").value)
+
+        var Totalcost = Snackboxes * Price
+        document.getElementById("pid1").textContent = "Total Cost: " + Totalcost
+
+        var Money = Totalbudget - Totalcost
+        document.getElementById("pid2").textContent = "Money Remaining: " + Money
+
+
+        }
+        
+    </script>
+</body>
+</html>
