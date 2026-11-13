@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result: Pass or Try Again</title>
+</head>
+<body>
+    <p id="pid1">Result:</p><br>
+    <input id="score" type="number"><br>s
+    <button onclick="quizResult()">See your Quiz Result</button>
+    
+    <script>
+        function quizResult(){
+            var score = Number(document.getElementById("score").value)
+            if (score >= 50){
+                document.getElementById("pid1").innerHTML=`You passed`
+            } 
+            else{
+                document.getElementById("pid1").innerHTML=`Try Again`
+            }
+
+        }
+    </script>
+</body>
+</html>

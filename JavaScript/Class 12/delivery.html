@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Delivery</title>
+</head>
+<body>
+    <input id="inp" type="number"><br><br>
+    <button onclick="delivery()">Check if you can get free delivery</button>
+    <p id="pid1">Result:</p>
+    
+    <script>
+        function delivery(){
+            var money= Number(document.getElementById("inp").value)
+            if(money >= 25){
+                document.getElementById("pid1").innerHTML=`You get free delivery!`
+            }
+            else{
+                document.getElementById("pid1").innerHTML=`Sorry, you do not get free delivery`
+            }
+        }
+    </script>
+</body>
+</html>

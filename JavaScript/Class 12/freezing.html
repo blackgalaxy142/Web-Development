@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freezing</title>
+</head>
+<body>
+<input id="inp" type="number">
+<p id="pid1">Result:</p>
+<button onclick="freezing()">Check if it is freezing outside</button>
+
+    <script>
+        function freezing(){
+            var temp = Number(document.getElementById("inp").value)
+            if(temp >= 0){
+                document.getElementById("pid1").innerHTML=`It is not freezing. Actually, it is above freezing.`
+            }
+            else{
+                document.getElementById("pid1").innerHTML=`It is freezing!`
+            }
+        }
+
+    </script>
+</body>
+</html>

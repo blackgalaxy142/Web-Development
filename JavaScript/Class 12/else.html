@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pid1">Result:</p> 
+    <button onclick="checkDriving()"> Are you eligible for Driving?</button>
+
+    <script>
+    
+        //        condition              dec1                  dec 2
+        // if (you treat me a pizza) I will come...or else I will not come 
+        //if(10 == 10){
+            //block1 for dec 1
+            //document.write(`I will come<br>`)
+        //}
+        // else{
+            //block2  for dec 2
+            //document.write(`I will not come<br>`)
+        //}
+
+        function checkDriving(){
+            var age = Number(prompt("Enter age:"))
+            if (age >=18){
+                document.getElementById('pid1').innerHTML=`you are eligible for driving!`
+            }
+            else{
+                document.getElementById('pid1').innerHTML=`you are not eligible for driving.`
+            }
+        }
+   
+   </script>
+</body>
+</html>
